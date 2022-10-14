@@ -11,11 +11,13 @@ import javax.servlet.FilterConfig;
 import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
 
 /**
  *
  * @author Shakith
  */
+@WebFilter(filterName = "RequestFiter",urlPatterns = {"/Login"})
 public class RequestFilter implements Filter{
 
     @Override

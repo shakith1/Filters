@@ -31,7 +31,7 @@ public class RequestFilter implements Filter{
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         
         HttpServletRequest hsr = (HttpServletRequest)request;
-        HttpServletResponse hsrp = (HttpServletResponse)request;
+        HttpServletResponse hsrp = (HttpServletResponse)response;
         System.out.println("doFilter....");
         chain.doFilter(request, response);
     }

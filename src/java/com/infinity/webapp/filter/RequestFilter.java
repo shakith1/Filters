@@ -12,6 +12,8 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 /**
  *
@@ -27,7 +29,11 @@ public class RequestFilter implements Filter{
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-       
+        
+        HttpServletRequest hsr = (HttpServletRequest)request;
+        HttpServletResponse hsrp = (HttpServletResponse)request;
+        System.out.println("doFilter....");
+        chain.doFilter(request, response);
     }
 
     @Override

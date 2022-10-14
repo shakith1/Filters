@@ -27,8 +27,9 @@ public class C implements Filter {
 
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-        System.out.println("C do Filter");
+        System.out.println("C do Filter before");
         chain.doFilter(request, response);
+        System.out.println("C do Filter after");
     }
 
     @Override

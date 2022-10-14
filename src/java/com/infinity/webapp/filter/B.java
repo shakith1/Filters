@@ -17,7 +17,7 @@ import javax.servlet.annotation.WebFilter;
  *
  * @author Shakith
  */
-@WebFilter(filterName = "B", urlPatterns = "/Login")
+//@WebFilter(filterName = "B", urlPatterns = "/Login")
 public class B implements Filter {
 
     @Override
@@ -28,6 +28,7 @@ public class B implements Filter {
     @Override
     public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
         System.out.println("B do Filter");
+        chain.doFilter(request, response);
     }
 
     @Override
